@@ -16,8 +16,9 @@
     (10==m)?'Out':(11==m)?'Nov':'Dez';
  
     return "" + (d<10?"0"+d:d) + "/" +
-           mmm + "/" +
-           (y<10?"0"+y:y);
+           mmm + "/" +y
+
+           //(y<10?"0"+y:y);
   }
  
   function date_lastmodified(){
