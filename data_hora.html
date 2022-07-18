@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>Exibindo a data da última alteração</TITLE>
+ 
+<script type="text/JavaScript" language="JavaScript">
+<!-- 
+  function date_ddmmmyy(date){
+    var d = date.getDate();
+    var m = date.getMonth() + 1;
+    var y = date.getYear();
+ 
+    var mmm = 
+    ( 1==m)?'Jan':( 2==m)?'Fev':(3==m)?'Mar':
+    ( 4==m)?'Abr':( 5==m)?'Mai':(6==m)?'Jun':
+    ( 7==m)?'Jul':( 8==m)?'Ago':(9==m)?'Set':
+    (10==m)?'Out':(11==m)?'Nov':'Dez';
+ 
+    return "" + (d<10?"0"+d:d) + "/" +
+           mmm + "/" +
+           (y<10?"0"+y:y);
+  }
+ 
+  function date_lastmodified(){
+    var lmd = document.lastModified;
+    var s = "Desconhecida";
+    var d1;
+ 
+    if(0 != (d1=Date.parse(lmd))){
+      s = "" + date_ddmmmyy(new Date(d1));
+    }
+ 
+    return s;
+  }
+// -->
+</script>
+ 
+</HEAD>
+<BODY>
+ 
+<script type="text/JavaScript" language="JavaScript">
+  document.write("Última Atualização: " + 
+    date_lastmodified());
+</script>
+ 
+</BODY>
+</HTML>
